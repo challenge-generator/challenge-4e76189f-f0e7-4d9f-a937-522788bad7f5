@@ -1,0 +1,119 @@
+<section class="product-list-container" role="region" aria-label="Catálogo de productos">
+  <header class="list-header">
+    <h1 class="list-title">Catálogo de Productos</h1>
+    <p class="product-count" aria-live="polite">
+      Mostrando {{ productCount() }} productos
+    </p>
+  </header>
+
+  <div class="filters-bar" role="search" aria-label="Filtros de productos">
+    <mat-form-field class="search-field" appearance="outline">
+      <mat-label>Buscar productos</mat-label>
+      <input 
+        matInput 
+        type="text"
+        placeholder="Nombre o descripción..."
+        (input)="onSearch($any($event.target).value)"
+        aria-label="Buscar productos por nombre o descripción">
+      <mat-icon matPrefix>search</mat-icon>
+    </mat-form-field>
+
+    <div class="filter-group">
+      <label id="category-label">Categoría:</label>
+      <mat-chip-listbox 
+        aria-labelledby="category-label"
+        (change)="onCategoryChange($event.value)">
+        @for (category of categories(); track category) {
+          <mat-chip-option 
+            [value]="category"
+            [selected]="selectedCategory() === category">
+            {{ category === 'all' ? 'Todas' : category }}
+          </mat-chip-option>
+        }
+      </mat-chip-listbox>
+    </div>
+
+    <div class="sort-controls">
+      <label for="sort-select">Ordenar por:</label>
+      <select 
+        id="sort-select"
+        class="sort-select"
+        [value]="sortBy()"
+        (change)="onSortChange($any($event.target).value)">
+        <option value="name">Nombre</option>
+        <option value="price">Precio</option>
+        <option value="rating">Valoración</option>
+      </select>
+    </div>
+
+    <div class="view-toggle" role="group" aria-label="Modo de vista">
+      <button 
+        mat-icon-button
+        [class.active]="viewMode() === 'grid'"
+        (click)="onViewModeChange('grid')"
+        aria-label="Vista de cuadrícula"
+        aria-pressed="{{ viewMode() === 'grid' }}">
+        <mat-icon>grid_view</mat-icon>
+      </button>
+      <button 
+        mat-icon-button
+        [class.active]="viewMode() === 'list'"
+        (click)="onViewModeChange('list')"
+        aria-label="Vista de lista"
+        aria-pressed="{{ viewMode() === 'list' }}">
+        <mat-icon>view_list</mat-icon>
+      </button>
+    </div>
+  </div>
+
+  @if (isLoading()) {
+    <div class="loading-state" role="status" aria-live="polite">
+      <mat-spinner diameter="48"></mat-spinner>
+      <p>Cargando productos...</p>
+    </div>
+  } @else if (error()) {
+    <div class="error-state" role="alert">
+      <mat-icon class="error-icon">error_outline</mat-icon>
+      <p class="error-message">{{ error() }}</p>
+      <button mat-raised-button color="primary" (click)="onRefresh()">
+        <mat-icon>refresh</mat-icon>
+        Reintentar
+      </button>
+    </div>
+  } @else if (filteredProducts().length === 0) {
+    <div class="empty-state" role="status">
+      <mat-icon class="empty-icon">inventory_2</mat-icon>
+      <p>No se encontraron productos que coincidan con los filtros.</p>
+      <button mat-button color="primary" (click)="onCategoryChange('all'); onSearch('')">
+        Limpiar filtros
+      </button>
+    </div>
+  } @else {
+    <main 
+      class="products-grid"
+      [class.list-view]="viewMode() === 'list'"
+      role="list"
+      aria-label="Lista de productos">
+      @for (product of filteredProducts(); track trackByProductId($index, product)) {
+        <article class="product-item" role="listitem">
+          <app-product-card
+            [product]="product"
+            (productClick)="onProductClick($event)"
+            (addToCart)="onAddToCart($event)">
+          </app-product-card>
+        </article>
+      }
+    </main>
+  }
+
+  <footer class="list-footer" role="contentinfo">
+    <button 
+      mat-mini-fab 
+      color="accent"
+      (click)="onRefresh()"
+      aria-label="Actualizar lista de productos"
+      class="refresh-button">
+      <mat-icon>refresh</mat-icon>
+    </button>
+  </footer>
+</section>

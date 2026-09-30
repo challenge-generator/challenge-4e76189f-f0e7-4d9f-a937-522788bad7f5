@@ -1,0 +1,244 @@
+{
+  "products": [
+    {
+      "id": "prod-001",
+      "sku": "LAPTOP-ULT-15",
+      "name": "Laptop UltraSlim 15 Pro",
+      "description": "Laptop de alta gama con procesador Intel Core i7, 16GB RAM, SSD 512GB, pantalla 15.6\" 4K",
+      "category": "electronics",
+      "subcategory": "laptops",
+      "brand": "TechPro",
+      "price": 1299.99,
+      "currency": "USD",
+      "stock": 45,
+      "availability": "in_stock",
+      "images": [
+        "https://s3.amazonaws.com/ecommerce-products/laptop-1.jpg",
+        "https://s3.amazonaws.com/ecommerce-products/laptop-2.jpg"
+      ],
+      "attributes": {
+        "processor": "Intel Core i7-12700H",
+        "ram": "16GB DDR5",
+        "storage": "512GB NVMe SSD",
+        "display": "15.6\" 4K OLED",
+        "weight": "1.8kg",
+        "battery": "72Wh"
+      },
+      "tags": ["laptop", "professional", "4k", "oled"],
+      "rating": 4.7,
+      "reviewCount": 234,
+      "createdAt": "2024-01-15T10:30:00Z",
+      "updatedAt": "2024-06-20T14:45:00Z"
+    },
+    {
+      "id": "prod-002",
+      "sku": "PHONE-FLG-01",
+      "name": "SmartPhone Galaxy X9",
+      "description": "Flagship phone con pantalla AMOLED 6.8\", cámara 200MP, batería 5000mAh",
+      "category": "electronics",
+      "subcategory": "smartphones",
+      "brand": "Samsung",
+      "price": 999.00,
+      "currency": "USD",
+      "stock": 120,
+      "availability": "in_stock",
+      "images": [
+        "https://s3.amazonaws.com/ecommerce-products/phone-1.jpg"
+      ],
+      "attributes": {
+        "processor": "Snapdragon 8 Gen 3",
+        "ram": "12GB",
+        "storage": "256GB",
+        "display": "6.8\" AMOLED 120Hz",
+        "camera": "200MP + 50MP + 10MP",
+        "battery": "5000mAh"
+      },
+      "tags": ["smartphone", "flagship", "android", "camera"],
+      "rating": 4.9,
+      "reviewCount": 567,
+      "createdAt": "2024-02-10T09:00:00Z",
+      "updatedAt": "2024-07-01T11:20:00Z"
+    },
+    {
+      "id": "prod-003",
+      "sku": "HEADSET-PRO-01",
+      "name": "Auriculares Wireless Pro ANC",
+      "description": "Auriculares con cancelación activa de ruido, 30h de batería, audio Hi-Res",
+      "category": "electronics",
+      "subcategory": "audio",
+      "brand": "AudioTech",
+      "price": 349.99,
+      "currency": "USD",
+      "stock": 200,
+      "availability": "in_stock",
+      "images": [
+        "https://s3.amazonaws.com/ecommerce-products/headset-1.jpg",
+        "https://s3.amazonaws.com/ecommerce-products/headset-2.jpg"
+      ],
+      "attributes": {
+        "type": "over-ear",
+        "connectivity": "Bluetooth 5.3",
+        "battery": "30 hours",
+        "anc": true,
+        "driverSize": "40mm",
+        "weight": "250g"
+      },
+      "tags": ["audio", "wireless", "anc", "bluetooth"],
+      "rating": 4.6,
+      "reviewCount": 189,
+      "createdAt": "2024-03-05T14:20:00Z",
+      "updatedAt": "2024-06-15T08:30:00Z"
+    },
+    {
+      "id": "prod-004",
+      "sku": "WATCH-SMT-01",
+      "name": "SmartWatch Sport Series 8",
+      "description": "Reloj inteligente con GPS, monitor de ritmo cardíaco, resistencia al agua 50m",
+      "category": "electronics",
+      "subcategory": "wearables",
+      "brand": "Apple",
+      "price": 429.00,
+      "currency": "USD",
+      "stock": 85,
+      "availability": "in_stock",
+      "images": [
+        "https://s3.amazonaws.com/ecommerce-products/watch-1.jpg"
+      ],
+      "attributes": {
+        "caseSize": "45mm",
+        "display": "AMOLED",
+        "battery": "18 hours",
+        "waterResistance": "50m",
+        "gps": true,
+        "heartRateMonitor": true
+      },
+      "tags": ["wearable", "smartwatch", "fitness", "gps"],
+      "rating": 4.8,
+      "reviewCount": 412,
+      "createdAt": "2024-01-20T11:00:00Z",
+      "updatedAt": "2024-07-10T16:00:00Z"
+    },
+    {
+      "id": "prod-005",
+      "sku": "TABLET-PRO-01",
+      "name": "Tablet Pro 12.9\"",
+      "description": "Tablet profesional con pantalla Mini-LED, compatible con Apple Pencil, M2 chip",
+      "category": "electronics",
+      "subcategory": "tablets",
+      "brand": "Apple",
+      "price": 1099.00,
+      "currency": "USD",
+      "stock": 60,
+      "availability": "in_stock",
+      "images": [
+        "https://s3.amazonaws.com/ecommerce-products/tablet-1.jpg",
+        "https://s3.amazonaws.com/ecommerce-products/tablet-2.jpg"
+      ],
+      "attributes": {
+        "display": "12.9\" Mini-LED",
+        "processor": "Apple M2",
+        "storage": "256GB",
+        "ram": "8GB",
+        "camera": "12MP wide",
+        "connectivity": "Wi-Fi 6E"
+      },
+      "tags": ["tablet", "professional", "creative"],
+      "rating": 4.7,
+      "reviewCount": 156,
+      "createdAt": "2024-04-01T08:00:00Z",
+      "updatedAt": "2024-06-28T12:15:00Z"
+    },
+    {
+      "id": "prod-006",
+      "sku": "DESK-ERG-01",
+      "name": "Escritorio Ergonómico Ajustable",
+      "description": "Escritorio standing desk con motor dual, altura ajustable 70-120cm, superficie MDF",
+      "category": "furniture",
+      "subcategory": "desks",
+      "brand": "ErgoDesk",
+      "price": 599.00,
+      "currency": "USD",
+      "stock": 25,
+      "availability": "in_stock",
+      "images": [
+        "https://s3.amazonaws.com/ecommerce-products/desk-1.jpg"
+      ],
+      "attributes": {
+        "material": "MDF + Steel",
+        "dimensions": "160x80cm",
+        "heightRange": "70-120cm",
+        "motor": "Dual motor",
+        "weightCapacity": "150kg"
+      },
+      "tags": ["furniture", "ergonomic", "standing-desk"],
+      "rating": 4.5,
+      "reviewCount": 78,
+      "createdAt": "2024-02-28T10:30:00Z",
+      "updatedAt": "2024-05-20T09:45:00Z"
+    },
+    {
+      "id": "prod-007",
+      "sku": "CHAIR-ERG-01",
+      "name": "Silla Ergonómica Premium",
+      "description": "Silla de oficina ergonómica con soporte lumbar, reposacabezas, mesh transpirable",
+      "category": "furniture",
+      "subcategory": "chairs",
+      "brand": "ErgoDesk",
+      "price": 449.00,
+      "currency": "USD",
+      "stock": 40,
+      "availability": "in_stock",
+      "images": [
+        "https://s3.amazonaws.com/ecommerce-products/chair-1.jpg"
+      ],
+      "attributes": {
+        "material": "Mesh + Aluminum",
+        "armrests": "4D adjustable",
+        "lumbarSupport": "Adjustable",
+        "headrest": true,
+        "maxWeight": "150kg",
+        "recline": "135 degrees"
+      },
+      "tags": ["furniture", "ergonomic", "office-chair"],
+      "rating": 4.6,
+      "reviewCount": 145,
+      "createdAt": "2024-03-10T13:00:00Z",
+      "updatedAt": "2024-06-05T10:30:00Z"
+    },
+    {
+      "id": "prod-008",
+      "sku": "MONITOR-ULT-01",
+      "name": "Monitor UltraWide 34\" Curvo",
+      "description": "Monitor curvo ultrawide 34\" UWQHD, 144Hz, IPS, HDR400, USB-C",
+      "category": "electronics",
+      "subcategory": "monitors",
+      "brand": "LG",
+      "price": 699.00,
+      "currency": "USD",
+      "stock": 55,
+      "availability": "in_stock",
+      "images": [
+        "https://s3.amazonaws.com/ecommerce-products/monitor-1.jpg"
+      ],
+      "attributes": {
+        "size": "34\"",
+        "resolution": "3440x1440",
+        "panel": "IPS",
+        "refreshRate": "144Hz",
+        "hdr": "HDR400",
+        "connectivity": "USB-C, HDMI, DisplayPort"
+      },
+      "tags": ["monitor", "ultrawide", "gaming", "curved"],
+      "rating": 4.8,
+      "reviewCount": 267,
+      "createdAt": "2024-01-05T09:15:00Z",
+      "updatedAt": "2024-07-08T14:20:00Z"
+    }
+  ],
+  "metadata": {
+    "totalProducts": 8,
+    "categories": ["electronics", "furniture"],
+    "lastUpdated": "2024-07-10T16:00:00Z",
+    "version": "1.0.0"
+  }
+}
